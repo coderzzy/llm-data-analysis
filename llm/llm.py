@@ -10,7 +10,11 @@ def calculate_token_count(content):
 
 
 def get_html_report_by_llm(llm_name, content, requirement):
+    result = ""
     if llm_name == "deepseek":
-        return get_html_report_by_deepseek(content, requirement)
-    # 默认是deepseek
-    return get_html_report_by_deepseek(content, requirement)
+        result = get_html_report_by_deepseek(content, requirement)
+    else:
+        # 默认是deepseek
+        result = get_html_report_by_deepseek(content, requirement)
+    print(f"llm_name: {llm_name}, input_token_count: {calculate_token_count(content)}, output_token_count: {calculate_token_count(result)}")
+    return result
