@@ -36,3 +36,6 @@ touch .env
 python run.py  
 ```
 
+## TODO
+1、试试 https://github.com/microsoft/markitdown 统一数据读取
+...
